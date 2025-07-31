@@ -3921,6 +3921,18 @@
 		(layer "Edge.Cuts")
 		(uuid "f0b4bd8a-82d9-4b58-8ea0-fe2616839f32")
 	)
+	(gr_text "RST BTN"
+		(at 90 62.5 0)
+		(layer "F.SilkS")
+		(uuid "0510ff06-2d3c-46bb-bdbc-a7f462860f11")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "GPIO5"
 		(at 103 65 0)
 		(layer "F.SilkS")
@@ -3933,7 +3945,19 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "IN/5V"
+	(gr_text "PWR LED"
+		(at 90 65 0)
+		(layer "F.SilkS")
+		(uuid "2363e938-7b8e-4ee2-96a6-e22cc03ba31a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "IN/3V3"
 		(at 42.5 61.5 0)
 		(layer "F.SilkS")
 		(uuid "2d23d640-4f69-4d78-bc85-d4dc4a6888c8")
@@ -3981,8 +4005,8 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "ESP32 S3 WROOM"
-		(at 78 62 0)
+	(gr_text "ESP32"
+		(at 84.5 80.5 0)
 		(layer "F.SilkS")
 		(uuid "7a26e263-29d5-436c-a195-6f4cbd15c89f")
 		(effects
@@ -3993,7 +4017,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "5V & GND to USB port on MB\nIN to MB, OUT to chassis (opt)\nBTNs have one 5V/high pin\nR1 & R2 = 220R/330R\n5V & GND headers are connected through\nPWR LED & R1 mandatory, HDD optional\nBTNs optional\ngithub.com/AngryUEFI/AngryESP V1.0"
+	(gr_text "5V & GND to USB port on MB\nIN to MB, OUT to chassis (opt)\nBTNs have one 3V3/high pin\nR1 & R2 = 220R/330R\n5V & GND headers are connected through\nPWR LED & R1 mandatory, HDD optional\nBTNs optional\ngithub.com/AngryUEFI/AngryESP V1.1"
 		(at 73.5 100.5 0)
 		(layer "F.SilkS")
 		(uuid "828d038a-56d7-429d-b21e-6415b1eee5bb")
@@ -4017,7 +4041,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "IN/5V"
+	(gr_text "IN/3V3"
 		(at 42.5 47 0)
 		(layer "F.SilkS")
 		(uuid "8f991521-68f8-4137-924f-13e7241ab12f")
@@ -4077,6 +4101,18 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "PWR BTN"
+		(at 90 57.5 0)
+		(layer "F.SilkS")
+		(uuid "df433e4b-e1c2-4c18-bbe6-b271a8053f18")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "USB Port"
 		(at 83 83.5 0)
 		(layer "F.SilkS")
@@ -4085,6 +4121,18 @@
 			(font
 				(size 1.5 1.5)
 				(thickness 0.1875)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "PWR BTN"
+		(at 90 60 0)
+		(layer "F.SilkS")
+		(uuid "ea506ecd-5783-47ca-b89c-15a0119e93e0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
 			)
 			(justify left bottom)
 		)
