@@ -39,8 +39,17 @@ There are two options:
 Use `ESPHome/ha.yaml` in the ESPHome Builder in HA. Create a new device and copy the contents of the `ha.yaml` into the file below the auto generated parts of the ESPHome config.
 
 ### Standalone
-* uses a simple HTTP API on the ESP directly
-* control via API of the ESP
-* only requires wifi AP with DHCP
+The `Standalone/` PlatformIO project ships a self-contained firmware that exposes a direct HTTP API for power control without Home Assistant. 
+It supports ESP32 boards (untested) and the Arduino UNO R4 WiFi (tested, working).
 
-TODO
+* build with `pio run -e esp32doit-espduino` for ESP32 or `pio run -e uno_r4_wifi` for the UNO R4 WiFi
+* upload with the matching `--target upload` command once the board is connected
+* configure Wi-Fi credentials by creating `Standalone/include/wifi_config.h` before flashing (based on template in same folder)
+* configure pins used on the board in `Standalone/include/pins_config.h` and the timing configuration for power cycling the experiment machine.
+* HTTP API endpoints:
+  * `POST /api/power/on` — tap the ATX power button (short pulse)
+  * `POST /api/power/off` — hold the power header long enough for a hard shutdown (~6 s)
+  * `POST /api/power/reset` — toggle the reset header
+  * `GET /api/power/led` — read the live state of the power LED input
+  * `POST /api/system/reboot` — reboot the controller itself
+  * `GET /api/health` — Returns SSID details and IP
